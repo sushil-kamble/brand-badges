@@ -4,19 +4,19 @@
       Hey there, I am Sushil & this is the small project created by me to make
       your github profiles & website look Awesome.
     </h3>
-    <div class="py-3 px-2 text-center bg-gray-200 shadow-lg">
+    <div class="py-3 px-2 text-center bg-gray-200 shadow-lg dark:bg-gray-800">
       <h2 class="font-light text-sm">Copy this link to get your badge</h2>
       <h2 class="font-mono">{{ format }}</h2>
     </div>
     <div class="py-3 flex justify-center">
       <h3 v-if="!imgSrc" class="font-mono">
-        <span class="bg-gray-300 px-3">LABEL</span>
+        <span class="bg-gray-300 dark:text-black px-3">LABEL</span>
         <span class="bg-gray-500 text-white px-3">BADGE</span>
       </h3>
       <img :src="imgSrc" :alt="label" class="h-14" v-else />
     </div>
 
-    <div class="py-3 px-2 bg-gray-200 shadow-lg">
+    <div class="py-3 px-2 bg-gray-200 shadow-lg dark:bg-gray-800">
       <h2 class="text-md font-semibold mb-2">
         Here is a simple logo generator, Start by entering label and color
       </h2>
@@ -150,11 +150,11 @@
       </ul>
     </div>
     <div class="py-3 mb-3 flex justify-between items-center">
-      <a href="">
+      <a href="https://github.com/sushil-kamble/brand-badges">
         <button class="btn bg-gray-600 text-white">Code</button>
       </a>
       <a
-        class="text-center text-gray-600 font-mono uppercase font-semibold text-lg"
+        class="text-center text-gray-600 dark:text-gray-50 font-mono uppercase font-semibold text-lg"
         href="https://sushil-kamble.netlify.app/"
         rel="noreferrer"
         target="_blank"

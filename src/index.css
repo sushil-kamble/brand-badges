@@ -29,3 +29,17 @@ body {
 .footer-input {
   @apply px-3 py-1 mx-2 text-xs rounded-lg border-2 border-gray-400 bg-gray-50 shadow outline-none focus:bg-white;
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+input {
+  color: black;
+}
+
+.limit-btn {
+  @apply cursor-pointer focus:border-opacity-0 w-full rounded-lg px-3 py-2 border-2 border-gray-600;
+}

@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="container flex flex-col min-h-screen mx-auto px-1 md:px-4 xl:px-20"
-  >
+  <div class="container px-2 lg:px-4">
     <Navbar />
-    <div class="mb-3 py-4 sticky top-0 bg-gray-50">
+    <div class="mb-3 py-4 sticky top-0 bg-gray-50 dark:bg-gray-700">
       <div class="flex justify-between items-center px-1 md:px-0">
         <input
           type="text"
@@ -27,7 +25,7 @@
       <div class="flex justify-between items-center mt-2">
         <h6 class="text-sm ml-1">Start typing and press enter to scroll up</h6>
         <h6
-          class="text-sm mr-1 text-right text-green-900 font-semibold"
+          class="text-sm mr-1 text-right text-green-900 dark:text-gray-50 font-semibold"
           v-if="iconObject"
         >
           Img tag copied to your clipboard - {{ iconObject.title }}
@@ -46,7 +44,11 @@
       style="min-height: 20vh"
       v-if="filterBadges.length > 0"
     >
-      <div v-for="(icon, n) in filterBadges.slice(0, limit)" :key="n">
+      <div
+        v-for="(icon, n) in filterBadges.slice(0, limit)"
+        :key="n"
+        class="p-0.5"
+      >
         <Icons :icon="icon" :type="type" @icon-clicked="iconClicked" />
       </div>
     </div>
@@ -55,7 +57,7 @@
     </div>
     <div class="my-4">
       <button
-        class="border-2 border-gray-600 bg-gray-200 rounded-lg px-3 py-2 text-gray-800 cursor-pointer hover:bg-gray-50 hover:text-gray-900 focus:border-opacity-0 w-full"
+        class="limit-btn bg-gray-200 dark:bg-gray-800 dark:text-white text-gray-800 hover:bg-gray-50 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
         @click="increaseLimit"
         v-if="filterBadges.length > limit"
       >
@@ -125,6 +127,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

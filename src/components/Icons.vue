@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tile border-gray-200 border-2 rounded-md shadow-inner cursor-pointer p-2"
+    class="tile border-gray-200 border-2 dark:border-gray-800 rounded-md shadow-inner cursor-pointer p-2"
     :style="styleObject"
     @click="iconClicked"
   >
@@ -40,7 +40,9 @@ export default {
       const final = hexToRgb(this.icon.color)
       return {
         '--color': `rgba(${final.r}, ${final.g}, ${final.b}, 0.05)`,
-        '--color-hover': `rgba(${final.r}, ${final.g}, ${final.b}, 0.10)`
+        '--color-hover': `rgba(${final.r}, ${final.g}, ${final.b}, 0.15)`,
+        'border-right': `1px solid ${this.icon.color}`,
+        'border-bottom': `1px solid ${this.icon.color}`
       }
     }
   },
