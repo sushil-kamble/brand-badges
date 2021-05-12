@@ -1,0 +1,31 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f9fafb;
+}
+::-moz-selection {
+  color: whitesmoke;
+  background: #4b5563;
+}
+::selection {
+  color: whitesmoke;
+  background: #4b5563;
+}
+.tile {
+  background-color: var(--color);
+}
+
+.tile:hover {
+  background-color: var(--color-hover);
+}
+
+.btn {
+  @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+
+.footer-input {
+  @apply px-3 py-1 mx-2 text-xs rounded-lg border-2 border-gray-400 bg-gray-50 shadow outline-none focus:bg-white;
+}
