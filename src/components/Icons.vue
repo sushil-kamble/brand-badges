@@ -1,6 +1,6 @@
 <template>
   <div
-    class="tile border-gray-200 border-2 dark:border-gray-800 rounded-md shadow-inner cursor-pointer p-2"
+    class="tile border-gray-200 border-2 dark:border-gray-600 rounded-md shadow-inner cursor-pointer p-2"
     :style="styleObject"
     @click="iconClicked"
   >

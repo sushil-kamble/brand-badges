@@ -10,7 +10,10 @@ module.exports = {
         center: true
       },
       colors: {
-        // Costom colors
+        background: {
+          light: '#f9fafb',
+          dark: '#22272E'
+        }
       }
     }
   },

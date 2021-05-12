@@ -6,7 +6,7 @@
     </h3>
     <div class="py-3 px-2 text-center bg-gray-200 shadow-lg dark:bg-gray-800">
       <h2 class="font-light text-sm">Copy this link to get your badge</h2>
-      <h2 class="font-mono">{{ format }}</h2>
+      <h2 class="break-words">{{ format }}</h2>
     </div>
     <div class="py-3 flex justify-center">
       <h3 v-if="!imgSrc" class="font-mono">
@@ -150,7 +150,11 @@
       </ul>
     </div>
     <div class="py-3 mb-3 flex justify-between items-center">
-      <a href="https://github.com/sushil-kamble/brand-badges">
+      <a
+        href="https://github.com/sushil-kamble/brand-badges"
+        rel="noreferrer"
+        target="_blank"
+      >
         <button class="btn bg-gray-600 text-white">Code</button>
       </a>
       <a

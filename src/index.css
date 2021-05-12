@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #f9fafb;
-}
 ::-moz-selection {
   color: whitesmoke;
   background: #4b5563;

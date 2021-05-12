@@ -1,7 +1,7 @@
 <template>
   <div class="container px-2 lg:px-4">
     <Navbar />
-    <div class="mb-3 py-4 sticky top-0 bg-gray-50 dark:bg-gray-700">
+    <div class="mb-2 py-4 sticky top-0 bg-gray-50 dark:bg-background-dark">
       <div class="flex justify-between items-center px-1 md:px-0">
         <input
           type="text"
@@ -23,32 +23,31 @@
         </select>
       </div>
       <div class="flex justify-between items-center mt-2">
-        <h6 class="text-sm ml-1">Start typing and press enter to scroll up</h6>
+        <h6 class="text-xs ml-1">Start typing and press enter to scroll up</h6>
         <h6
-          class="text-sm mr-1 text-right text-green-900 dark:text-gray-50 font-semibold"
+          class="text-xs mr-1 text-right text-green-900 dark:text-gray-50 font-semibold"
           v-if="iconObject"
         >
           Img tag copied to your clipboard - {{ iconObject.title }}
         </h6>
-        <h6 class="text-sm mr-1 text-right" v-else>
+        <h6 class="text-xs mr-1 text-right" v-else>
           Click on tile to copy html/md src tag
         </h6>
       </div>
     </div>
-    <h1>Total search results are {{ filterBadges.length }}</h1>
-    <h1 class="mb-3 font-semibold text-sm">
-      Just click on the tile to copy html/md src tag
-    </h1>
+    <div class="p-0.5">
+      <h1>Total search results are {{ filterBadges.length }}</h1>
+      <h1 class="mb-3 font-semibold text-sm">
+        Just click on the tile to copy html/md src tag
+      </h1>
+    </div>
+
     <div
-      class="grid grid-cols-3 gap-2 md:grid-cols-6"
+      class="grid grid-cols-3 gap-2 md:grid-cols-6 p-0.5"
       style="min-height: 20vh"
       v-if="filterBadges.length > 0"
     >
-      <div
-        v-for="(icon, n) in filterBadges.slice(0, limit)"
-        :key="n"
-        class="p-0.5"
-      >
+      <div v-for="(icon, n) in filterBadges.slice(0, limit)" :key="n">
         <Icons :icon="icon" :type="type" @icon-clicked="iconClicked" />
       </div>
     </div>
