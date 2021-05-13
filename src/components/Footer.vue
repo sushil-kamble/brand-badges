@@ -191,18 +191,25 @@ export default {
   computed: {
     format() {
       const label = this.label.length > 0 ? this.label : '#'
-      const color = this.color.length > 0 ? this.color : '#'
-      const type = this.type.length > 0 ? this.type : '#'
+      const color = this.color.length > 0 ? this.color.toLowerCase() : '#'
+      const type = this.type.length > 0 ? this.type.toLowerCase() : '#'
       const logo = this.logo.length > 0 ? this.logo : '#'
-      const l_color = this.l_color.length > 0 ? this.l_color : '#'
+      const l_color = this.l_color.length > 0 ? this.l_color.toLowerCase() : '#'
       const l_width = this.l_width.length > 0 ? this.l_width : '#'
-      const lab_color = this.lab_color.length > 0 ? this.lab_color : '#'
+      const lab_color =
+        this.lab_color.length > 0 ? this.lab_color.toLowerCase() : '#'
 
       return `https://img.shields.io/badge/${label}-${color}?style=${type}&logo=${logo}&logoColor=${l_color}&logoWidth=${l_width}&labelColor=${lab_color}`
     },
     imgSrc() {
       if (!this.label || !this.color) return ''
-      return `https://img.shields.io/badge/${this.label}-${this.color}?style=${this.type}&logo=${this.logo}&logoColor=${this.l_color}&logoWidth=${this.l_width}&labelColor=${this.lab_color}`
+      return `https://img.shields.io/badge/${
+        this.label
+      }-${this.color.toLowerCase()}?style=${this.type.toLowerCase()}&logo=${
+        this.logo
+      }&logoColor=${this.l_color.toLowerCase()}&logoWidth=${
+        this.l_width
+      }&labelColor=${this.lab_color.toLowerCase()}`
     }
   }
 }

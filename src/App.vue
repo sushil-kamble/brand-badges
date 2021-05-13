@@ -103,7 +103,7 @@ export default {
     filterBadges() {
       if (this.badge.length > 0) {
         return this.icons.filter((badge) =>
-          badge.title.toLowerCase().includes(this.badge)
+          badge.title.toLowerCase().includes(this.badge.toLowerCase())
         )
       }
       return this.icons
